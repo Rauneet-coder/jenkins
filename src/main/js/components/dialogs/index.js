@@ -126,7 +126,7 @@ Dialog.prototype.init = function () {
     this.dialog.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
-        if (this.ok.disabled == false) {
+        if (this.ok.disabled === false) {
           this.ok.dispatchEvent(new Event("click"));
         }
       }
@@ -222,7 +222,7 @@ Dialog.prototype.show = function () {
     }
     if (
       this.ok != null &&
-      (this.dialogType != "form" || !this.options.submitButton)
+      (this.dialogType !== "form" || !this.options.submitButton)
     ) {
       this.ok.addEventListener(
         "click",
